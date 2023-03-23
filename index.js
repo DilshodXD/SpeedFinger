@@ -1,9 +1,17 @@
 let btns = document.querySelectorAll(".button");
+let text = document.querySelector(".text-inner").innerHTML.toLowerCase();
+
+let i = 0;
+document.addEventListener("keydown", (e) => {
+  let name = e.key;
+
+  if (text[i] == name) {
+    i += 1;
+  }
+});
 
 document.addEventListener("keydown", (e) => {
   let name = e.key;
-  let code = e.code;
-
   for (let i = 0; i < btns.length; i++) {
     if (name == "CapsLock") name = "caps";
     else if (name == "Backspace") name = "←";

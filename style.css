@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,13 +7,38 @@
 body {
   background-color: #252525;
 }
+
+/* ======================== */
+
+.text {
+  display: flex;
+  justify-content: center;
+
+  padding: 10px 20px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  
+  margin: 100px auto 0;
+  width: 500px;
+}
+
+.text-inner{
+  text-align: justify;
+  font-family: "Titillium Web";
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+
+/* ======================== */
+
 .keyborad {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4px;
 
-  margin-top: 200px;
+  margin-top: 80px;
 }
 
 .raw {
@@ -26,7 +51,7 @@ body {
 }
 
 .button {
-  font-family: 'Titillium Web';
+  font-family: "Titillium Web";
   font-size: 16px;
   font-weight: 600;
 
@@ -45,7 +70,6 @@ body {
   width: 240px;
 }
 
-
 .blue {
   background-color: #1e96fc;
 }
@@ -55,12 +79,12 @@ body {
 .green {
   background-color: #38b000;
 }
-.red{
-    background-color: #BA181B;
+.red {
+  background-color: #ba181b;
 }
-.pink{
+.pink {
   background-color: #f72585;
 }
-.orange{
+.orange {
   background-color: #bc6c25;
 }
