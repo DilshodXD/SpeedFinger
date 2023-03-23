@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
@@ -25,15 +26,16 @@ body {
 }
 
 .button {
+  font-family: 'Titillium Web';
+  font-size: 16px;
+  font-weight: 600;
+
+  outline: none;
   min-width: 40px;
   min-height: 40px;
   padding: 10px 15px;
   border: none;
   border-radius: 5px;
-}
-
-.button:active {
-  opacity: 0.7;
 }
 
 .w-100 {
@@ -42,7 +44,6 @@ body {
 .space {
   width: 240px;
 }
-
 
 
 .blue {
@@ -56,4 +57,10 @@ body {
 }
 .red{
     background-color: #BA181B;
+}
+.pink{
+  background-color: #f72585;
+}
+.orange{
+  background-color: #bc6c25;
 }
