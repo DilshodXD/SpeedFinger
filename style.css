@@ -16,15 +16,17 @@ body {
   display: flex;
   justify-content: center;
 
+  margin: 70px auto 0;
+  padding: 0 15px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.text-inner {
   padding: 10px 20px;
   border: 1px solid #fff;
   border-radius: 10px;
 
-  margin: 100px auto 0;
-  width: 1000px;
-}
-
-.text-inner {
   font-family: "M PLUS Code Latin";
   font-size: 16px;
   font-weight: 400;
@@ -39,7 +41,7 @@ body {
   align-items: center;
   gap: 4px;
 
-  margin-top: 80px;
+  margin-top: 50px;
 }
 
 .raw {
