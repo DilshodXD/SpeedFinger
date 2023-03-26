@@ -1,19 +1,48 @@
 let btns = document.querySelectorAll(".button");
 let text = document.querySelector(".text-inner");
+let audioBtn = document.querySelector(".audio");
+let audioIcon = document.querySelectorAll(".icon");
+let mobile = document.querySelector("#mobile");
+let audio = new Audio(
+  "./Mechanical-Keyboard-single-button-presses-10-www.FesliyanStudios.com (mp3cut.net).wav"
+);
 let lorem =
   "alert  arguments Array blur Boolean callee caller captureEvents clearInterval clearTimeout close closed confirm constructor Date defaultStatus document escape eval find focus frames Function history home Infinity innerHeight innerWidth isFinite isNaN java length location locationbar Math menubar moveBy name NaN netscape Number Object open opener outerHeight outerWidth Packages pageXOffset pageYOffset parent parseFloat parseInt personalbar print prompt prototype RegExp releaseEvents resizeBy resizeTo routeEvent scroll scrollbars scrollBy scrollTo self setInterval setTimeout status statusbar stop String toolbar top toString unescape unwatch valueOf watch window abstract	arguments	await	boolean break	byte	case catch char class	const	continue debugger	default	delete	do double	else	enum	eval export	extends	false	final finally	float	for	function goto	if	implements	import in	instanceof	int	interface let	long	native	new null	package	private	protected public	return	short	static super	switch	synchronized	this throw	throws	transient	true try	typeof	var	void volatile	while	with	yield";
 
-  // let loremArr = lorem.split("");
-let loremTextArr = lorem.split(" "); // sozlardan tashkil topgan Array  //  length = 80 
+if (/Android|iPhone/i.test(navigator.userAgent)) {
+  mobile.style = `
+    display: block;
+  `;
+  document.body.style = `overflow: hidden;`
+}
+
+let r = 0;
+
+audioIcon[0].style = "display: none;";
+audioIcon[1].style = "display: inline-block;";
+
+audioBtn.addEventListener("click", () => {
+  if (r % 2 == 1) {
+    audioIcon[0].style = "display: none;";
+    audioIcon[1].style = "display: inline-block;";
+  } else if (r % 2 == 0) {
+    audioIcon[0].style = "display: inline-block;";
+    audioIcon[1].style = "display: none;";
+  }
+  r++;
+});
+
+// let loremArr = lorem.split("");
+let loremTextArr = lorem.split(" "); // sozlardan tashkil topgan Array  //  length = 80
 let loremTextArrNew = []; // bosh Array. sozlar uchun yaratilgan Array
 
 for (let i = 0; loremTextArrNew.length != loremTextArr.length; i++) {
   let randomNum = Math.floor(Math.random() * 1000); // 100 gacham bolgan sonlar
 
   if (randomNum < loremTextArr.length) {
-        loremTextArrNew.push(loremTextArr[randomNum]);
+    loremTextArrNew.push(loremTextArr[randomNum]);
   }
-} // 
+} //
 
 let loremArr = loremTextArrNew.toString().replace(/,/g, " ").split(""); // harflar
 
@@ -52,8 +81,21 @@ document.addEventListener("keydown", (e) => {
   }
 }); // harflar ortini bo'yaydi
 
+function createExplosion() {
+  var snd = new Audio(
+    "./Mechanical-Keyboard-single-button-presses-10-www.FesliyanStudios.com (mp3cut.net).wav"
+  );
+  snd.volume = 0.4;
+  snd.play();
+}
+
 document.addEventListener("keydown", (e) => {
   let name = e.key;
+
+  if (r % 2 == 0) {
+    createExplosion();
+  }
+
   for (let i = 0; i < btns.length; i++) {
     if (name == "CapsLock") name = "caps";
     else if (name == "Backspace") name = "←";
