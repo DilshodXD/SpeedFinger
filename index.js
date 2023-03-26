@@ -10,10 +10,11 @@ let lorem =
   "alert  arguments Array blur Boolean callee caller captureEvents clearInterval clearTimeout close closed confirm constructor Date defaultStatus document escape eval find focus frames Function history home Infinity innerHeight innerWidth isFinite isNaN java length location locationbar Math menubar moveBy name NaN netscape Number Object open opener outerHeight outerWidth Packages pageXOffset pageYOffset parent parseFloat parseInt personalbar print prompt prototype RegExp releaseEvents resizeBy resizeTo routeEvent scroll scrollbars scrollBy scrollTo self setInterval setTimeout status statusbar stop String toolbar top toString unescape unwatch valueOf watch window abstract	arguments	await	boolean break	byte	case catch char class	const	continue debugger	default	delete	do double	else	enum	eval export	extends	false	final finally	float	for	function goto	if	implements	import in	instanceof	int	interface let	long	native	new null	package	private	protected public	return	short	static super	switch	synchronized	this throw	throws	transient	true try	typeof	var	void volatile	while	with	yield";
 
 if (/Android|iPhone/i.test(navigator.userAgent)) {
-  mobile.style = `
-    display: block;
+  document.body.innerHTML = `
+    <div id="mobile" class="mobile">
+      <h1 class="mobile-text">Iltimos dasturni Komyuterda oching</h1>
+    </div>
   `;
-  document.body.style = `overflow: hidden;`
 }
 
 let r = 0;

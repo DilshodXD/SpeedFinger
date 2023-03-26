@@ -8,31 +8,24 @@
 }
 body {
   background-color: #212529;
+  overflow: hidden;
 }
 /* ======================== */
 
-#mobile{
-  display: none;
-}
-
 .mobile{
-  background-color: #212529;
-  width: 100%;
-  height: 100vh;
-  z-index: 999;
-  position: fixed;
-  
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 50vh;
 }
+
 .mobile-text{
-  align-items: center;
-  
+  text-align: center;  
   font-family: "Titillium Web";
   font-size: 16px;
   font-weight: 600;
   color: #fff;
+  line-height: 0;
 }
 
 /* ======================== */
