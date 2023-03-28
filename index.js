@@ -100,6 +100,8 @@ document.addEventListener("keydown", (e) => {
   for (let i = 0; i < btns.length; i++) {
     if (name == "CapsLock") name = "caps";
     else if (name == "Backspace") name = "←";
+    else if (name == " ") name = "";
+
 
     if (btns[i].innerHTML.toLowerCase() == name.toLowerCase()) {
       btns[i].style = `opacity: 0.5;`;
