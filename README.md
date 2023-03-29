@@ -1,6 +1,6 @@
 # keyboard
 
-Link: https://keyboard-xd.netlify.app
+Link: https://speedfinger.netlify.app
 
 UZ:
 Bu sayt orqali siz klaviaturada qanday qilib to'gri yozish va klaviaturada barmoqlarni joylashishini o'rganishingiz mumkun. Sozlar JavaScriptning maxsus so'zlari generatsiyasi. Sayt har yangilanganida so'zlarni joylashuvi o'zgaradi.
