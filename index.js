@@ -3,6 +3,11 @@ let text = document.querySelector(".text-inner");
 let audioBtn = document.querySelector(".audio");
 let audioIcon = document.querySelectorAll(".icon");
 let mobile = document.querySelector("#mobile");
+let startButton = document.querySelector("#startButton");
+
+let bottom = document.querySelector(".bottom");
+let info = document.querySelector(".info");
+
 let audio = new Audio(
   "./Mechanical-Keyboard-single-button-presses-10-www.FesliyanStudios.com (mp3cut.net).wav"
 );
@@ -15,7 +20,12 @@ if (/Android|iPhone/i.test(navigator.userAgent)) {
       <h1 class="mobile-text">Iltimos dasturni Komyuterda oching</h1>
     </div>
   `;
-}
+} // agar Android yoki Iphone bolsa sayt ishlamaydi
+
+startButton.addEventListener("click", () => {
+  bottom.style = "display: block;";
+  info.style = "display: none;";
+});
 
 let r = 0;
 
@@ -31,19 +41,20 @@ audioBtn.addEventListener("click", () => {
     audioIcon[1].style = "display: none;";
   }
   r++;
-});
+}); // ovoz ochirish va yoqish
 
 // let loremArr = lorem.split("");
+
 let loremTextArr = lorem.split(" "); // sozlardan tashkil topgan Array  //  length = 80
 let loremTextArrNew = []; // bosh Array. sozlar uchun yaratilgan Array
 
-for (let i = 0; loremTextArrNew.length != loremTextArr.length; i++) {
+for (; loremTextArrNew.length != 50; ) {
   let randomNum = Math.floor(Math.random() * 1000); // 100 gacham bolgan sonlar
 
   if (randomNum < loremTextArr.length) {
     loremTextArrNew.push(loremTextArr[randomNum]);
   }
-} //
+} // so'zlarni random tarzda jonatadi
 
 let loremArr = loremTextArrNew.toString().replace(/,/g, " ").split(""); // harflar
 
@@ -88,7 +99,7 @@ function createExplosion() {
   );
   snd.volume = 0.4;
   snd.play();
-}
+} // ovoz chiqarish uchun funksiya
 
 document.addEventListener("keydown", (e) => {
   let name = e.key;
