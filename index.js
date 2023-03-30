@@ -27,6 +27,14 @@ document.addEventListener("keydown", (e) => {
   info.style = "display: none;"; 
 });
 
+let i = 0;
+
+startButton.addEventListener("click", (e) => {
+  i = 1
+  bottom.style = "display: block;";
+  info.style = "display: none;";
+});
+
 let r = 0;
 
 audioIcon[0].style = "display: none;";
@@ -68,9 +76,8 @@ loremArr.map((item) => {
 
 let letter = text.querySelectorAll("span"); // har bir harf
 
-letter[0].style = "background-color: #495057;"; // birinchi harf ortini boyaydi
+letter[1].style = "background-color: #495057;"; // birinchi harf ortini boyaydi
 
-let i = 0;
 document.addEventListener("keydown", (e) => {
   let name = e.key;
 
