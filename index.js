@@ -22,9 +22,9 @@ if (/Android|iPhone/i.test(navigator.userAgent)) {
   `;
 } // agar Android yoki Iphone bolsa sayt ishlamaydi
 
-startButton.addEventListener("click", () => {
+document.addEventListener("keydown", (e) => {
   bottom.style = "display: block;";
-  info.style = "display: none;";
+  info.style = "display: none;"; 
 });
 
 let r = 0;

@@ -123,6 +123,11 @@ body {
   color: #fff;
 }
 
+.text-first{
+  width: 0;
+  background: rgb(73, 80, 87) !important; 
+}
+
 /* ======================== */
 
 .keyborad {
