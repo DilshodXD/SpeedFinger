@@ -14,7 +14,6 @@ body {
 
 .info {
   margin: 100px auto 0;
-
 }
 
 .info-left {
@@ -31,7 +30,7 @@ body {
   filter: blur(2px);
 }
 
-.info-start{
+.info-start {
   display: block;
   margin: 80px auto 0;
   background-color: #073b4c;
@@ -43,6 +42,30 @@ body {
   font-size: 16px;
   font-weight: 600;
   color: #fff;
+}
+
+.reminder {
+  margin-top: 60px;
+
+  font-family: "Titillium Web";
+  font-size: 26px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+  animation: reminder 3s linear 0s infinite normal forwards;
+}
+
+@keyframes reminder {
+  0%,
+	50%,
+	100% {
+		opacity: 1;
+	}
+
+	25%,
+	75% {
+		opacity: 0.3;
+	}
 }
 
 .info-title {
@@ -123,9 +146,9 @@ body {
   color: #fff;
 }
 
-.text-first{
+.text-first {
   width: 0;
-  background: rgb(73, 80, 87) !important; 
+  background: rgb(73, 80, 87) !important;
 }
 
 /* ======================== */
