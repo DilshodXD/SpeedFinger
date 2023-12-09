@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./index.css";
 import Navbar from "./components/Navbar";
-import './index.css'
+import Home from "./Components/Home";
 
 function App() {
   return (
@@ -8,10 +9,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Navbar />}>
-            {/* <Route index element={<Home />} />
-            <Route path="blogs" element={<Blogs />} />
-            <Route path="contact" element={<Contact />} />
-            <Route path="*" element={<NoPage />} /> */}
+            <Route index element={<Home language={true} />} />
           </Route>
         </Routes>
       </BrowserRouter>

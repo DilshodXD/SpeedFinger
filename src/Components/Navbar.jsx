@@ -1,21 +1,18 @@
+import { Outlet, Link } from "react-router-dom";
+
 function Navbar() {
   return (
-    <div>
-      <div className="container m-auto py-4 flex justify-between items-center">
-        <h1 className="font-black text-4xl	text-gray-900">SpeedFingers 🖐️</h1>
-        <div className="flex gap-3">
-          <button className="px-4 py-1 bg-gray-900 rounded-xl text-white">
-            O'zbekcha
-          </button>
-          <button className="px-4 py-1 bg-gray-900 rounded-xl text-white">
-            Inglizch
-          </button>
-          <button className="px-4 py-1 bg-gray-900 rounded-xl text-white">
-            Ruscha
-          </button>
+    <div className="bg-neutral-900 h-screen">
+      <div className="shadow-slate-200/20 shadow-lg">
+        <div className=" container m-auto py-1 flex justify-between items-center">
+          <div className="flex items-center gap-1">
+            <span className="text-3xl">🖐️</span>
+            <p className="font-black text-3xl	text-white">SpeedFingers</p>
+          </div>
+          <div className="flex gap-3"></div>
         </div>
       </div>
-      <hr className="border-2 border-gray-900	"/>
+      <Outlet />
     </div>
   );
 }

@@ -4,10 +4,22 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
 }
 
+.text-border {
+  text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000, 2px 2px #000,
+    -2px -2px #000, 2px -2px #000, -2px 2px #000;
+}
+
+.keyboard{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  
+}
