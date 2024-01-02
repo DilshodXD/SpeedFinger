@@ -16,10 +16,60 @@
     -2px -2px #000, 2px -2px #000, -2px 2px #000;
 }
 
-.keyboard{
+.keyboard {
   display: flex;
   flex-direction: column;
   gap: 8px;
   align-items: center;
-  
+}
+
+.key-1 {
+  background: #1a1b4b;
+}
+.key-2 {
+  background: #292a73;
+}
+.key-3 {
+  background: #3e4491;
+}
+.key-4 {
+  background: #3a9efd;
+}
+.key-5 {
+  background: #f7a400;
+}
+.key {
+  width: 55px;
+  height: 47px;
+  position: relative;
+}
+.key-en {
+  position: absolute;
+  top: 2px;
+  left: 13px;
+}
+.key-ru {
+  position: absolute;
+  bottom: 2px;
+  right: 12px;
+}
+
+.keyru-ru {
+  position: absolute;
+  top: 2px;
+  left: 13px;
+}
+.keyru-en {
+  position: absolute;
+  bottom: 2px;
+  right: 12px;
+}
+.dropDown {
+  position: relative;
+}
+.dropDown-list {
+  display: flex;
+  flex-direction: column;
+  top: 40px;
+  position: absolute;
 }

@@ -41,14 +41,19 @@ const keyboard = [
   ],
 ];
 
-export default function Home() {
+export default function HomeRu({ language }) {
   return (
     <div className="">
       <div className="mt-16 mb-14">
         <p className="text-neutral-400 font-black w-4/6 mx-auto">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos ut quam
-          animi possimus eum aspernatur voluptatum quia nobis nam praesentium
-          ipsa eaque, esse labore aliquam odio dolorem deserunt beatae. Magnam.
+          часто используемый в печати и вэб-дизайне. является стандартной
+          "рыбой" для текстов на латинице с начала века. В то время некий
+          безымянный печатник создал большую коллекцию размеров и форм шрифтов,
+          используя для распечатки образцов. не только успешно пережил без
+          заметных изменений пять веков, но и перешагнул в электронный дизайн.
+          Его популяризации в новое время послужили публикация листов с
+          образцами в 60-х годах и, в более недавнее время, программы
+          электронной вёрстки типа, в шаблонах которых используется.
         </p>
       </div>
       <div className="keyboard">
@@ -56,10 +61,10 @@ export default function Home() {
           <div key={index} className="flex gap-2">
             {e.map((i, index) => (
               <div key={index} className={"key rounded-lg " + i[2]}>
-                <span className="key-en text-white font-bold uppercase text-xl ">
+                <span className="keyru-en text-white font-bold uppercase text-base">
                   {i[0]}
                 </span>
-                <span className="key-ru text-white font-bold uppercase text-base">
+                <span className="keyru-ru text-white font-bold uppercase text-xl">
                   {i[1]}
                 </span>
               </div>
